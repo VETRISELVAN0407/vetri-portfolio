@@ -20,18 +20,20 @@
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600&family=Yellowtail&display=swap" rel="stylesheet">
 
 <!-- Custom CSS -->
+<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <!-- ===================== NAVBAR ===================== -->
 <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
-  <div class="container">
-    <a class="navbar-brand" href="#home">
-      <span class="logo-bracket">&lt;</span>Vetri&nbsp;Selvan<span class="logo-bracket">/&gt;</span>
+  <div class="container-xl nav-shell">
+    <a class="navbar-brand" href="#home" aria-label="Vetri Selvan - home">
+      <i class="bi bi-code-slash brand-mark" aria-hidden="true"></i>
+      <span>Vetri <span class="brand-accent">Selvan</span></span>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="toggler-icon"></span>
@@ -39,7 +41,7 @@
       <span class="toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ms-auto">
+      <ul class="navbar-nav nav-pill mx-lg-auto">
         <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
@@ -49,116 +51,122 @@
         <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
+      <div class="theme-toggle" role="group" aria-label="Colour theme">
+        <button type="button" data-theme-set="light" aria-label="Light theme"><i class="bi bi-brightness-high-fill"></i></button>
+        <button type="button" data-theme-set="dark" aria-label="Dark theme"><i class="bi bi-moon-stars-fill"></i></button>
+      </div>
     </div>
   </div>
 </nav>
 
 <!-- ===================== HERO ===================== -->
 <header class="hero-section" id="home">
-  <div class="hero-bg-grid" aria-hidden="true"></div>
+  <div class="hero-bg-dots" aria-hidden="true"></div>
   <div class="hero-bg-glow" aria-hidden="true"></div>
-  <div class="container">
+  <span class="spark s1" aria-hidden="true"></span><span class="spark s2" aria-hidden="true"></span>
+  <span class="spark s3" aria-hidden="true"></span><span class="spark s4" aria-hidden="true"></span>
+
+  <div class="container-xl">
     <div class="row align-items-center hero-row">
 
       <!-- Left -->
       <div class="col-lg-6 hero-left" data-animate="fade-up">
-        <p class="hero-eyebrow"><span class="dot-pulse" aria-hidden="true"></span>Available for opportunities</p>
-        <p class="hero-hello">Hello, I'm</p>
+        <p class="hero-eyebrow"><span class="dot-live" aria-hidden="true"></span><span><b>Welcome</b> to my Portfolio</span></p>
+        <p class="hero-hello">Hello, I&rsquo;m</p>
         <h1 class="hero-name">Vetri Selvan</h1>
         <h2 class="hero-role">
-          <span id="typedRole">Java Full Stack Developer</span><span class="type-cursor">|</span>
+          <span id="typedRole">Software Developer</span><span class="type-cursor">|</span>
         </h2>
-        <p class="hero-desc">Passionate Java developer focused on building scalable, responsive and user-friendly web applications.</p>
+        <p class="hero-desc">Passionate <strong>Java</strong> developer focused on building scalable, responsive and user-friendly web applications.</p>
 
         <div class="hero-btns">
-          <a href="#projects" class="btn btn-accent-solid">View My Projects</a>
+          <a href="#projects" class="btn btn-accent-solid">View My Projects <i class="bi bi-arrow-right"></i></a>
           <a href="resume/resume.pdf" download class="btn btn-accent-outline">
             <i class="bi bi-download"></i> Download Resume
           </a>
         </div>
 
-        <div class="hero-socials">
-          <a href="https://github.com/VETRISELVAN0407" target="_blank" rel="noopener" aria-label="GitHub profile" class="social-icon"><i class="bi bi-github"></i></a>
-          <a href="https://www.linkedin.com/in/vetri-selvan-161293362" target="_blank" rel="noopener" aria-label="LinkedIn profile" class="social-icon"><i class="bi bi-linkedin"></i></a>
-          <a href="mailto:k.vetriselvan04@gmail.com" aria-label="Send email" class="social-icon"><i class="bi bi-envelope-fill"></i></a>
-        </div>
+        <p class="tech-label">Technologies I Work With <span aria-hidden="true"></span></p>
+        <ul class="tech-row" aria-label="Technologies">
+          <li title="Java"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/java/java-original.svg" alt="Java" loading="lazy"></li>
+          <li title="HTML5"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/html5/html5-original.svg" alt="HTML5" loading="lazy"></li>
+          <li title="CSS3"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/css3/css3-original.svg" alt="CSS3" loading="lazy"></li>
+          <li title="JavaScript"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/javascript/javascript-original.svg" alt="JavaScript" loading="lazy"></li>
+          <li title="Bootstrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" loading="lazy"></li>
+          <li title="PostgreSQL"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" loading="lazy"></li>
+          <li title="Spring Boot"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/spring/spring-original.svg" alt="Spring" loading="lazy"></li>
+        </ul>
       </div>
 
       <!-- Right -->
       <div class="col-lg-6 hero-right" data-animate="fade-in">
         <div class="hero-visual">
-          <div class="hero-ring" aria-hidden="true"></div>
-          <div class="hero-photo-wrap">
-            <img src="images/profile.jpg" alt="Portrait of Vetri Selvan" class="hero-photo">
-          </div>
+          <div class="hv-panel hv-panel-main" aria-hidden="true"></div>
+          <div class="hv-panel hv-panel-small" aria-hidden="true"></div>
+          <div class="hv-dots hv-dots-a" aria-hidden="true"></div>
+          <div class="hv-dots hv-dots-b" aria-hidden="true"></div>
+          <img src="images/hero-cutout.png" alt="Portrait of Vetri Selvan" class="hero-photo" width="886" height="1200">
 
-          <span class="tech-badge badge-java" style="--d:0s"><i class="bi bi-cup-hot-fill"></i> Java</span>
-          <span class="tech-badge badge-spring" style="--d:0.4s">Spring</span>
-          <span class="tech-badge badge-mysql" style="--d:0.8s"><i class="bi bi-database-fill"></i> MySQL</span>
-          <span class="tech-badge badge-html" style="--d:1.2s">HTML</span>
-          <span class="tech-badge badge-css" style="--d:1.6s">CSS</span>
-          <span class="tech-badge badge-js" style="--d:2s">JavaScript</span>
+          <div class="hv-chip"><i class="bi bi-code-slash"></i> Java Developer</div>
+          <p class="hv-script" aria-hidden="true">Let&rsquo;s Build<br><span>Something Great</span></p>
+
+          <div class="hv-stats">
+            <div><i class="bi bi-briefcase-fill"></i><small>Real Projects</small><b>5+</b></div>
+            <div><i class="bi bi-mortarboard-fill"></i><small>Education</small><b>B.E. ECE</b></div>
+            <div><i class="bi bi-rocket-takeoff-fill"></i><small>Experience</small><b>Fresher</b></div>
+          </div>
         </div>
       </div>
 
     </div>
-
-    <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
-      <span></span>
-    </a>
   </div>
+
+  <svg class="hero-wave" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <linearGradient id="wv1" x1="0" x2="1"><stop offset="0" stop-color="#14E1D0"/><stop offset=".55" stop-color="#3B82F6"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient>
+      <linearGradient id="wv2" x1="0" x2="1"><stop offset="0" stop-color="#14E1D0" stop-opacity="0"/><stop offset=".5" stop-color="#14E1D0" stop-opacity=".9"/><stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/></linearGradient>
+    </defs>
+    <path d="M0 150 C 220 60, 420 70, 640 140 S 1040 240, 1260 120 S 1400 90, 1440 100 L1440 220 L0 220 Z" fill="url(#wv1)" opacity=".22"/>
+    <path d="M0 175 C 260 110, 480 130, 720 170 S 1160 215, 1440 140 L1440 220 L0 220 Z" fill="url(#wv1)" opacity=".35"/>
+    <path d="M0 150 C 220 60, 420 70, 640 140 S 1040 240, 1260 120 S 1400 90, 1440 100" fill="none" stroke="url(#wv2)" stroke-width="2"/>
+    <path d="M0 175 C 260 110, 480 130, 720 170 S 1160 215, 1440 140" fill="none" stroke="url(#wv2)" stroke-width="1.5"/>
+  </svg>
 </header>
 
 <!-- ===================== ABOUT ===================== -->
-<section class="section" id="about">
-  <div class="container">
-    <p class="section-eyebrow" data-animate="fade-up">01 &mdash; Introduction</p>
-    <h2 class="section-title" data-animate="fade-up">About Me</h2>
+<section class="section about-section" id="about">
+  <div class="about-glow" aria-hidden="true"></div>
+  <div class="about-dots about-dots-l" aria-hidden="true"></div>
+  <div class="about-dots about-dots-r" aria-hidden="true"></div>
+  <div class="container-xl about-wrap">
+    <div class="about-head" data-animate="fade-up">
+      <p class="about-kicker"><span>/</span> Who I Am <span>/</span></p>
+      <h2 class="about-title">About <em>Me</em></h2>
+      <span class="about-rule" aria-hidden="true"></span>
+    </div>
 
-    <div class="row align-items-center gy-5">
+    <div class="row align-items-center gy-5 about-row">
       <div class="col-lg-5" data-animate="fade-in">
-        <div class="about-visual">
-          <img src="images/me.png" alt="Vetri Selvan working on a laptop" class="about-img">
-          <div class="about-frame" aria-hidden="true"></div>
+        <div class="about-photo">
+          <div class="ap-back ap-back-1" aria-hidden="true"></div>
+          <div class="ap-back ap-back-2" aria-hidden="true"></div>
+          <div class="ap-frame"><img src="images/me.png" alt="Vetri Selvan working on a laptop" class="about-img"></div>
+          <div class="hv-chip ap-chip"><i class="bi bi-code-slash"></i> Java Developer</div>
         </div>
       </div>
 
       <div class="col-lg-7" data-animate="fade-up">
-        <p class="about-text">
-          I'm an engineering graduate with a strong foundation in Core Java and hands-on experience
-          building full-stack web applications using JSP, JDBC and MySQL. I enjoy designing responsive,
-          user-friendly front-end interfaces with HTML, CSS and Bootstrap, backed by clean and reliable
-          server-side logic.
-        </p>
-        <p class="about-text">
-          My work spans backend development, database design and frontend integration &mdash; I like
-          taking a project from a raw idea to a fully working application, solving real problems along
-          the way with practical exposure to Maven and Apache Tomcat gained through academic and
-          personal projects. I'm a fast learner with a solid problem-solving mindset, always looking to
-          sharpen my craft and build software that people actually enjoy using.
-        </p>
+        <h3 class="about-name">I&rsquo;m <em>Vetri Selvan</em></h3>
+        <p class="about-role">Software Developer<span aria-hidden="true"></span></p>
+        <p class="about-text">I&rsquo;m a passionate Java developer with a strong foundation in Core Java and modern web technologies. I enjoy building scalable, responsive and user-friendly web applications.</p>
+        <p class="about-text">My recent experience includes developing dynamic web applications with technologies like HTML, CSS, JavaScript, Bootstrap, and Spring Boot. I&rsquo;m always eager to learn new technologies and take on challenging projects to create innovative solutions.</p>
 
-        <div class="about-tags">
-          <span class="about-tag">Java Programming</span>
-          <span class="about-tag">Backend Development</span>
-          <span class="about-tag">Database Design</span>
-          <span class="about-tag">Frontend Development</span>
-          <span class="about-tag">Problem Solving</span>
-        </div>
+        <h4 class="about-skills-title"><i class="bi bi-layers-fill"></i> My <em>Skills</em><span aria-hidden="true"></span></h4>
+        <div class="about-skill-list"><span class="about-skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/java/java-original.svg" alt="" loading="lazy">Java</span><span class="about-skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/spring/spring-original.svg" alt="" loading="lazy">Spring Boot</span><span class="about-skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/html5/html5-original.svg" alt="" loading="lazy">HTML</span><span class="about-skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/css3/css3-original.svg" alt="" loading="lazy">CSS</span><span class="about-skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/javascript/javascript-original.svg" alt="" loading="lazy">JavaScript</span><span class="about-skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/bootstrap/bootstrap-original.svg" alt="" loading="lazy">Bootstrap</span><span class="about-skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/postgresql/postgresql-original.svg" alt="" loading="lazy">PostgreSQL</span><span class="about-skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/mysql/mysql-original.svg" alt="" loading="lazy">MySQL</span><span class="about-skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/git/git-original.svg" alt="" loading="lazy">Git</span></div>
 
-        <div class="row about-stats">
-          <div class="col-4">
-            <h3 class="stat-num" data-count="3">0</h3>
-            <p class="stat-label">Projects Completed</p>
-          </div>
-          <div class="col-4">
-            <h3 class="stat-num" data-count="12">0</h3>
-            <p class="stat-label">Technologies</p>
-          </div>
-          <div class="col-4">
-            <h3 class="stat-num" data-count="3">0</h3>
-            <p class="stat-label">Certifications</p>
-          </div>
+        <div class="about-foot">
+          <a href="#contact" class="btn btn-accent-outline about-cta">Let&rsquo;s Work Together <i class="bi bi-arrow-right"></i></a>
+          <span class="about-sign" aria-hidden="true">Vetri Selvan</span>
         </div>
       </div>
     </div>
@@ -168,87 +176,94 @@
 <!-- ===================== SKILLS ===================== -->
 <section class="section section-alt" id="skills">
   <div class="container">
-    <p class="section-eyebrow" data-animate="fade-up">02 &mdash; Toolbox</p>
-    <h2 class="section-title" data-animate="fade-up">Skills &amp; Technologies</h2>
-    <p class="section-sub" data-animate="fade-up">Languages, frameworks and tools I use to build full-stack applications.</p>
+    <div class="about-head" data-animate="fade-up">
+      <p class="about-kicker"><span>/</span> Toolbox <span>/</span></p>
+      <h2 class="about-title">Skills &amp; <em>Technologies</em></h2>
+      <span class="about-rule" aria-hidden="true"></span>
+      <p class="sec-sub">Languages, frameworks and tools I use to build and deploy full-stack applications.</p>
+    </div>
 
     <div class="row g-4 skills-grid">
-
       <div class="col-md-6 col-lg-4" data-animate="fade-up">
         <div class="skill-card">
-          <div class="skill-card-head"><i class="bi bi-code-slash"></i><h3>Programming</h3></div>
-          <div class="skill-bar-item">
-            <div class="skill-bar-label"><span>Java</span><span>85%</span></div>
-            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
-          </div>
-          <div class="skill-bar-item">
-            <div class="skill-bar-label"><span>JavaScript</span><span>70%</span></div>
-            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
-          </div>
-          <div class="skill-bar-item">
-            <div class="skill-bar-label"><span>SQL</span><span>75%</span></div>
-            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4" data-animate="fade-up">
-        <div class="skill-card">
-          <div class="skill-card-head"><i class="bi bi-server"></i><h3>Backend</h3></div>
-          <div class="skill-bar-item">
-            <div class="skill-bar-label"><span>JSP / Servlets</span><span>80%</span></div>
-            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
-          </div>
-          <div class="skill-bar-item">
-            <div class="skill-bar-label"><span>JDBC</span><span>80%</span></div>
-            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
-          </div>
-          <div class="skill-bar-item">
-            <div class="skill-bar-label"><span>Spring / Spring Boot</span><span>75%</span></div>
-            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4" data-animate="fade-up">
-        <div class="skill-card">
-          <div class="skill-card-head"><i class="bi bi-window-stack"></i><h3>Frontend</h3></div>
-          <div class="skill-bar-item">
-            <div class="skill-bar-label"><span>HTML5</span><span>90%</span></div>
-            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
-          </div>
-          <div class="skill-bar-item">
-            <div class="skill-bar-label"><span>CSS3</span><span>85%</span></div>
-            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
-          </div>
-          <div class="skill-bar-item">
-            <div class="skill-bar-label"><span>Bootstrap 5</span><span>85%</span></div>
-            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4" data-animate="fade-up">
-        <div class="skill-card">
-          <div class="skill-card-head"><i class="bi bi-database-fill"></i><h3>Database</h3></div>
-          <div class="skill-bar-item">
-            <div class="skill-bar-label"><span>MySQL</span><span>80%</span></div>
-            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+          <div class="skill-card-head"><i class="bi bi-cup-hot-fill"></i><h3>Programming Languages</h3></div>
+          <div class="skill-chips">
+            <span class="skill-chip">Java</span>
           </div>
         </div>
       </div>
 
       <div class="col-md-6 col-lg-8" data-animate="fade-up">
         <div class="skill-card">
+          <div class="skill-card-head"><i class="bi bi-server"></i><h3>Backend Development</h3></div>
+          <div class="skill-chips">
+            <span class="skill-chip">Core Java (OOP, Collections, Exception Handling)</span>
+            <span class="skill-chip">Spring</span>
+            <span class="skill-chip">Spring Boot</span>
+            <span class="skill-chip">REST APIs</span>
+            <span class="skill-chip">Spring Security</span>
+            <span class="skill-chip">JWT Authentication</span>
+            <span class="skill-chip">JSP</span>
+            <span class="skill-chip">Servlets</span>
+            <span class="skill-chip">JDBC</span>
+            <span class="skill-chip">Hibernate</span>
+            <span class="skill-chip">JPA</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-6" data-animate="fade-up">
+        <div class="skill-card">
+          <div class="skill-card-head"><i class="bi bi-window-stack"></i><h3>Frontend Development</h3></div>
+          <div class="skill-chips">
+            <span class="skill-chip">React.js</span>
+            <span class="skill-chip">HTML5</span>
+            <span class="skill-chip">CSS3</span>
+            <span class="skill-chip">JavaScript</span>
+            <span class="skill-chip">Bootstrap</span>
+            <span class="skill-chip">jQuery</span>
+            <span class="skill-chip">Responsive Web Design</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-6" data-animate="fade-up">
+        <div class="skill-card">
+          <div class="skill-card-head"><i class="bi bi-database-fill"></i><h3>Database &amp; Migration</h3></div>
+          <div class="skill-chips">
+            <span class="skill-chip">PostgreSQL</span>
+            <span class="skill-chip">MySQL</span>
+            <span class="skill-chip">Flyway</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-6" data-animate="fade-up">
+        <div class="skill-card">
           <div class="skill-card-head"><i class="bi bi-tools"></i><h3>Tools</h3></div>
-          <div class="tool-badges">
-            <span class="tool-badge"><i class="bi bi-git"></i> Git</span>
-            <span class="tool-badge"><i class="bi bi-github"></i> GitHub</span>
-            <span class="tool-badge"><i class="bi bi-code-square"></i> NetBeans</span>
-            <span class="tool-badge"><i class="bi bi-code-square"></i> VS Code</span>
-            <span class="tool-badge"><i class="bi bi-hdd-stack-fill"></i> Apache Tomcat</span>
-            <span class="tool-badge"><i class="bi bi-box-seam-fill"></i> Maven</span>
-            <span class="tool-badge"><i class="bi bi-box-seam-fill"></i> Dockers</span>
+          <div class="skill-chips">
+            <span class="skill-chip">Git</span>
+            <span class="skill-chip">GitHub</span>
+            <span class="skill-chip">Maven</span>
+            <span class="skill-chip">Apache Tomcat</span>
+            <span class="skill-chip">Postman</span>
+            <span class="skill-chip">IntelliJ IDEA</span>
+            <span class="skill-chip">VS Code</span>
+            <span class="skill-chip">NetBeans</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-6" data-animate="fade-up">
+        <div class="skill-card">
+          <div class="skill-card-head"><i class="bi bi-cloud-arrow-up-fill"></i><h3>Cloud &amp; Deployment</h3></div>
+          <div class="skill-chips">
+            <span class="skill-chip">Vercel</span>
+            <span class="skill-chip">Render</span>
+            <span class="skill-chip">Neon</span>
+            <span class="skill-chip">Railway</span>
+            <span class="skill-chip">Docker</span>
+            <span class="skill-chip">AWS</span>
           </div>
         </div>
       </div>
@@ -260,18 +275,21 @@
 <!-- ===================== EDUCATION ===================== -->
 <section class="section" id="education">
   <div class="container">
-    <p class="section-eyebrow" data-animate="fade-up">03 &mdash; Background</p>
-    <h2 class="section-title" data-animate="fade-up">Education</h2>
+    <div class="about-head" data-animate="fade-up">
+      <p class="about-kicker"><span>/</span> Background <span>/</span></p>
+      <h2 class="about-title">My <em>Education</em></h2>
+      <span class="about-rule" aria-hidden="true"></span>
+    </div>
 
     <div class="timeline">
       <div class="timeline-item" data-animate="fade-up">
-        <div class="timeline-dot"></div>
+        <div class="timeline-dot"><i class="bi bi-mortarboard-fill"></i></div>
         <div class="timeline-content">
           <span class="timeline-date">2022 &ndash; 2026</span>
           <h3 class="timeline-title">B.E. Electronics and Communication Engineering</h3>
           <p class="timeline-org">Dhanalakshmi Srinivasan College of Engineering, Coimbatore</p>
           <p class="timeline-desc">Engineering graduate with a strong foundation in Core Java, problem-solving and full-stack
-            web development, built through academic coursework and personal projects. Current CGPA: 8.0.</p>
+            web development, built through academic coursework and personal projects. Current CGPA: 7.5.</p>
         </div>
       </div>
     </div>
@@ -281,41 +299,36 @@
 <!-- ===================== EXPERIENCE ===================== -->
 <section class="section section-alt" id="experience">
   <div class="container">
-    <p class="section-eyebrow" data-animate="fade-up">04 &mdash; Journey</p>
-    <h2 class="section-title" data-animate="fade-up">Experience</h2>
+    <div class="about-head" data-animate="fade-up">
+      <p class="about-kicker"><span>/</span> Journey <span>/</span></p>
+      <h2 class="about-title">My <em>Experience</em></h2>
+      <span class="about-rule" aria-hidden="true"></span>
+    </div>
 
     <div class="timeline">
       <div class="timeline-item" data-animate="fade-up">
-        <div class="timeline-dot"></div>
+        <div class="timeline-dot"><i class="bi bi-briefcase-fill"></i></div>
         <div class="timeline-content">
-          <span class="timeline-date">6 Months</span>
+          <span class="timeline-date">Present</span>
           <h3 class="timeline-title">Software Development Intern</h3>
-          <p class="timeline-org">Appscore Solutions</p>
-          <p class="timeline-desc">Contributed to software development tasks and supported the implementation of application features,
-            Collaborated with the development team to test, debug, and improve application functionality.</p>
+          <p class="timeline-org">TesDB Academy</p>
+          <ul class="timeline-list">
+            <li>Gained practical exposure to software development and real-world IT workflows.</li>
+            <li>Improved understanding of software development practices and problem-solving approaches.</li>
+          </ul>
         </div>
       </div>
 
-    <div class="timeline">
       <div class="timeline-item" data-animate="fade-up">
-        <div class="timeline-dot"></div>
+        <div class="timeline-dot"><i class="bi bi-laptop"></i></div>
         <div class="timeline-content">
           <span class="timeline-date">6 Days</span>
           <h3 class="timeline-title">Software Development Intern</h3>
           <p class="timeline-org">Codebind Technologies</p>
-          <p class="timeline-desc">Gained practical exposure to software development and real-world IT workflows,
-            improving my understanding of development practices and problem-solving approaches.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item" data-animate="fade-up">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <span class="timeline-date">6 Days</span>
-          <h3 class="timeline-title">Industrial Automation Intern</h3>
-          <p class="timeline-org">Welltech Control Systems</p>
-          <p class="timeline-desc">Gained exposure to industrial control systems and basic automation concepts,
-            observing industrial processes and technical operations in a real-world environment.</p>
+          <ul class="timeline-list">
+            <li>Gained practical exposure to software development and real-world IT workflows.</li>
+            <li>Improved understanding of software development practices and problem-solving approaches.</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -325,26 +338,28 @@
 <!-- ===================== PROJECTS ===================== -->
 <section class="section" id="projects">
   <div class="container">
-    <p class="section-eyebrow" data-animate="fade-up">05 &mdash; Selected Work</p>
-    <h2 class="section-title" data-animate="fade-up">Projects</h2>
-    <p class="section-sub" data-animate="fade-up">A few things I've built, from full-stack web apps to multi-page responsive sites.</p>
+    <div class="about-head" data-animate="fade-up">
+      <p class="about-kicker"><span>/</span> Selected Work <span>/</span></p>
+      <h2 class="about-title">My <em>Projects</em></h2>
+      <span class="about-rule" aria-hidden="true"></span>
+      <p class="sec-sub">A few things I've built, from full-stack Spring Boot &amp; React apps to responsive multi-page sites.</p>
+    </div>
     <div class="row g-4">
       <div class="col-lg-4 col-md-6" data-animate="fade-up">
         <article class="project-card">
           <div class="project-img-wrap">
-            <img src="images/projects/wayfarer-tours.jpg" alt="Wayfarer Tours tourism package management screenshot" class="project-img">
+            <img src="images/projects/mayil-boutique.jpg" alt="Mayil Boutique e-commerce screenshot" class="project-img" loading="lazy">
             <div class="project-overlay">
-              <a href="https://github.com/VETRISELVAN0407/Tourism-Package-Management" target="_blank" rel="noopener" class="project-icon-btn" aria-label="View GitHub repository"><i class="bi bi-github"></i></a>
+              <a href="https://boutique.cloudrtech.com/" target="_blank" rel="noopener" class="project-icon-btn" aria-label="Live Demo: Mayil Boutique"><i class="bi bi-box-arrow-up-right"></i></a>
             </div>
           </div>
           <div class="project-body">
-            <h3 class="project-title">Wayfarer Tours</h3>
-            <p class="project-desc">A tourism package management web application for managing tourism packages, customers and trip-related operations, with full CRUD functionality.</p>
-            <div class="project-tech">
-              <span>Java</span><span>JSP</span><span>Servlets</span><span>MySQL</span><span>Bootstrap 5</span>
-            </div>
+            <h3 class="project-title">Mayil Boutique</h3>
+            <p class="project-sub">Full-Stack E-Commerce Application</p>
+            <p class="project-desc">A full-stack fashion e-commerce app with product browsing, product details, wishlist, shopping cart and order management. Includes secure user authentication, admin product management and a responsive UI across desktop and mobile.</p>
+            <div class="project-tech"><span>React.js</span><span>Java</span><span>Spring Boot</span><span>PostgreSQL</span><span>JWT</span><span>JavaScript</span><span>HTML</span><span>CSS</span></div>
             <div class="project-links">
-              <a href="https://github.com/VETRISELVAN0407/Tourism-Package-Management" target="_blank" rel="noopener">GitHub <i class="bi bi-arrow-up-right"></i></a>
+              <a href="https://boutique.cloudrtech.com/" target="_blank" rel="noopener">Live Demo <i class="bi bi-arrow-up-right"></i></a>
             </div>
           </div>
         </article>
@@ -353,19 +368,18 @@
       <div class="col-lg-4 col-md-6" data-animate="fade-up">
         <article class="project-card">
           <div class="project-img-wrap">
-            <img src="images/projects/cloudrtech.jpg" alt="Cloudrtech company website screenshot" class="project-img">
+            <img src="images/projects/nadhalahari.jpg" alt="Nadhalahari multi-page website screenshot" class="project-img" loading="lazy">
             <div class="project-overlay">
-              <a href="http://www.cloudrtech.com/index.html" target="_blank" rel="noopener" class="project-icon-btn" aria-label="View live demo"><i class="bi bi-box-arrow-up-right"></i></a>
+              <a href="https://naadalahari.com/beta/" target="_blank" rel="noopener" class="project-icon-btn" aria-label="Live Demo: Nadhalahari"><i class="bi bi-box-arrow-up-right"></i></a>
             </div>
           </div>
           <div class="project-body">
-            <h3 class="project-title">Cloudrtech Company Website</h3>
-            <p class="project-desc">Contributed to the development of a company website with a focus on layout and presentation, building a responsive, professionally structured interface.</p>
-            <div class="project-tech">
-              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Bootstrap 5</span>
-            </div>
+            <h3 class="project-title">Nadhalahari</h3>
+            <p class="project-sub">Multi-Page Responsive Website</p>
+            <p class="project-desc">A multi-page, themed website with modern, aesthetic user interfaces, interactive elements, animations, transitions and responsive navigation.</p>
+            <div class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Bootstrap</span></div>
             <div class="project-links">
-              <a href="http://www.cloudrtech.com/index.html" target="_blank" rel="noopener">Live Demo <i class="bi bi-arrow-up-right"></i></a>
+              <a href="https://naadalahari.com/beta/" target="_blank" rel="noopener">Live Demo <i class="bi bi-arrow-up-right"></i></a>
             </div>
           </div>
         </article>
@@ -374,19 +388,53 @@
       <div class="col-lg-4 col-md-6" data-animate="fade-up">
         <article class="project-card">
           <div class="project-img-wrap">
-            <img src="images/projects/yogalahari-nadhalahari.jpg" alt="Yogalahari and Nadhalahari multi-page website screenshot" class="project-img">
+            <img src="images/projects/stack-burger.jpg" alt="The Stack Burger restaurant website screenshot" class="project-img" loading="lazy">
             <div class="project-overlay">
-              <a href="#" target="_blank" rel="noopener" class="project-icon-btn" aria-label="View live demo"><i class="bi bi-box-arrow-up-right"></i></a>
+              <a href="https://the-stack-burger.vercel.app/" target="_blank" rel="noopener" class="project-icon-btn" aria-label="The Stack Burger: The Stack Burger &amp; Strawberry Milkshake"><i class="bi bi-box-arrow-up-right"></i></a>
             </div>
           </div>
           <div class="project-body">
-            <h3 class="project-title">Yogalahari &amp; Nadhalahari</h3>
-            <p class="project-desc">Multi-page, themed responsive websites with modern, aesthetic interfaces, interactive elements, animations and transitions.</p>
-            <div class="project-tech">
-              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Bootstrap 5</span>
-            </div>
+            <h3 class="project-title">The Stack Burger &amp; Strawberry Milkshake</h3>
+            <p class="project-sub">Static Pages</p>
+            <p class="project-desc">Responsive static pages &mdash; an interactive restaurant website and a product landing page &mdash; with modern layouts, interactive navigation and smooth scroll animations.</p>
+            <div class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Bootstrap</span></div>
             <div class="project-links">
-              <a href="http://www.yogalahari.com" target="_blank" rel="noopener">Live Demo <i class="bi bi-arrow-up-right"></i></a>
+              <a href="https://the-stack-burger.vercel.app/" target="_blank" rel="noopener">The Stack Burger <i class="bi bi-arrow-up-right"></i></a>
+              <a href="https://strawberry-milkshake-sand.vercel.app/" target="_blank" rel="noopener">Strawberry Milkshake <i class="bi bi-arrow-up-right"></i></a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-animate="fade-up">
+        <article class="project-card">
+          <div class="project-img-wrap">
+            <div class="project-visual" aria-hidden="true"><i class="bi bi-file-earmark-person-fill"></i></div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Resume Builder</h3>
+            <p class="project-sub">Resume Generation Application</p>
+            <p class="project-desc">A resume builder that lets users enter personal and professional details and preview a formatted resume, with responsive form layouts for a user-friendly workflow.</p>
+            <div class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Bootstrap</span><span>Spring Boot</span><span>PostgreSQL</span></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-animate="fade-up">
+        <article class="project-card">
+          <div class="project-img-wrap">
+            <img src="images/projects/wayfarer-tours.jpg" alt="Wayfarer Tours tourism package management screenshot" class="project-img" loading="lazy">
+            <div class="project-overlay">
+              <a href="https://github.com/VETRISELVAN0407/Tourism-Package-Management" target="_blank" rel="noopener" class="project-icon-btn" aria-label="GitHub: Tourism Package Management"><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Tourism Package Management</h3>
+            <p class="project-sub">Web-Based Booking Application (JSP)</p>
+            <p class="project-desc">A web-based tourism booking system built with Java and JSP with full CRUD functionality, a clean responsive Bootstrap front end and MySQL storage, deployed on Apache Tomcat using Maven.</p>
+            <div class="project-tech"><span>Java</span><span>JSP</span><span>HTML</span><span>CSS</span><span>Bootstrap</span><span>MySQL</span><span>Maven</span><span>Tomcat</span></div>
+            <div class="project-links">
+              <a href="https://github.com/VETRISELVAN0407/Tourism-Package-Management" target="_blank" rel="noopener">GitHub <i class="bi bi-github"></i></a>
             </div>
           </div>
         </article>
@@ -399,8 +447,8 @@
 <!-- ===================== GITHUB CTA ===================== -->
 <section class="github-cta">
   <div class="container text-center" data-animate="fade-up">
-    <i class="bi bi-github github-cta-icon"></i>
-    <h2>Explore My Code</h2>
+    <span class="cta-badge"><i class="bi bi-github"></i></span>
+    <h2>Explore My <em>Code</em></h2>
     <p>Check out my GitHub profile to explore my projects, experiments and development work.</p>
     <a href="https://github.com/VETRISELVAN0407" target="_blank" rel="noopener" class="btn btn-accent-solid">Visit GitHub</a>
   </div>
@@ -409,39 +457,33 @@
 <!-- ===================== CERTIFICATIONS ===================== -->
 <section class="section" id="certifications">
   <div class="container">
-    <p class="section-eyebrow" data-animate="fade-up">06 &mdash; Credentials</p>
-    <h2 class="section-title" data-animate="fade-up">Certifications</h2>
+    <div class="about-head" data-animate="fade-up">
+      <p class="about-kicker"><span>/</span> Credentials <span>/</span></p>
+      <h2 class="about-title">My <em>Certifications</em></h2>
+      <span class="about-rule" aria-hidden="true"></span>
+    </div>
 
-    <div class="row g-4">
-
+    <div class="row g-4 justify-content-center">
       <div class="col-md-6 col-lg-3" data-animate="fade-up">
         <div class="cert-card">
           <i class="bi bi-patch-check-fill cert-icon"></i>
           <h3 class="cert-title">Java Full Stack Certification</h3>
-          <p class="cert-org">Tes DB Academy</p>
-          <p class="cert-date">[Date]</p>
-          
+          <p class="cert-org">TesDB Academy</p>
         </div>
       </div>
 
       <div class="col-md-6 col-lg-3" data-animate="fade-up">
         <div class="cert-card">
           <i class="bi bi-patch-check-fill cert-icon"></i>
-          <h3 class="cert-title">Internship Completion Certification</h3>
-          <p class="cert-org">AppScore Solutions</p>
-          <p class="cert-date">2025</p>
-         
+          <h3 class="cert-title">TesDB Academy Internship Certification</h3>
+          <p class="cert-org">TesDB Academy</p>
         </div>
       </div>
-
 
       <div class="col-md-6 col-lg-3" data-animate="fade-up">
         <div class="cert-card">
           <i class="bi bi-patch-check-fill cert-icon"></i>
           <h3 class="cert-title">IoT and Embedded Systems Certification</h3>
-          <p class="cert-org">[Issuing Organization]</p>
-          <p class="cert-date">[Date]</p>
-         
         </div>
       </div>
 
@@ -449,9 +491,8 @@
         <div class="cert-card">
           <i class="bi bi-patch-check-fill cert-icon"></i>
           <h3 class="cert-title">Hackathon Participation Certification</h3>
-          <p class="cert-org">Dhanalakshmi Srinivasan college of Engineering</p>
+          <p class="cert-org">Dhanalakshmi Srinivasan College of Engineering</p>
           <p class="cert-date">April 30th 2025</p>
-         
         </div>
       </div>
 
@@ -462,7 +503,8 @@
 <!-- ===================== RESUME CTA ===================== -->
 <section class="resume-cta">
   <div class="container text-center" data-animate="fade-up">
-    <h2>Want to know more about me?</h2>
+    <span class="cta-badge"><i class="bi bi-file-earmark-person-fill"></i></span>
+    <h2>Want to know more <em>about me?</em></h2>
     <p>Download my resume to explore my technical skills, projects, education and experience.</p>
     <div class="resume-btns">
       <a href="resume/resume.pdf" download class="btn btn-accent-solid"><i class="bi bi-download"></i> Download Resume</a>
@@ -474,9 +516,12 @@
 <!-- ===================== CONTACT ===================== -->
 <section class="section" id="contact">
   <div class="container">
-    <p class="section-eyebrow" data-animate="fade-up">07 &mdash; Get In Touch</p>
-    <h2 class="section-title" data-animate="fade-up">Let's Connect</h2>
-    <p class="section-sub" data-animate="fade-up">Have an opportunity or a question? My inbox is open.</p>
+    <div class="about-head" data-animate="fade-up">
+      <p class="about-kicker"><span>/</span> Get In Touch <span>/</span></p>
+      <h2 class="about-title">Let&rsquo;s <em>Connect</em></h2>
+      <span class="about-rule" aria-hidden="true"></span>
+      <p class="sec-sub">Have an opportunity or a question? My inbox is open.</p>
+    </div>
 
     <div class="row g-5">
       <div class="col-lg-5" data-animate="fade-up">
@@ -558,7 +603,7 @@
   <div class="container">
     <div class="row gy-4 align-items-start">
       <div class="col-md-4">
-        <a href="#home" class="footer-logo"><span class="logo-bracket">&lt;</span>Vetri&nbsp;Selvan<span class="logo-bracket">/&gt;</span></a>
+        <a href="#home" class="footer-logo"><i class="bi bi-code-slash brand-mark" aria-hidden="true"></i> Vetri <span class="brand-accent">Selvan</span></a>
         <p class="footer-role">Java Full Stack Developer</p>
         <div class="footer-socials">
           <a href="https://github.com/VETRISELVAN0407" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>

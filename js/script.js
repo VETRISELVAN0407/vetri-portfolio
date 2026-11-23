@@ -1,6 +1,6 @@
 /* =====================================================================
    VETRI SELVAN — PORTFOLIO SCRIPT
-   Sections: 1. Navbar scroll + active link  2. Mobile nav auto-close
+   Sections: 1. Navbar scroll + active link  1b. Theme toggle  2. Mobile nav auto-close
              3. Typing effect  4. Scroll reveal (IntersectionObserver)
              5. Animated counters  6. Skill bar animation
              7. Back-to-top button  8. Contact form validation
@@ -43,6 +43,24 @@ document.addEventListener('DOMContentLoaded', function () {
   setActiveLink();
   window.addEventListener('scroll', setActiveLink, { passive: true });
 
+  /* ---------- 1b. THEME TOGGLE (dark / light, remembered) ---------- */
+  const root = document.documentElement;
+  const themeBtns = document.querySelectorAll('[data-theme-set]');
+  function applyTheme(theme) {
+    root.setAttribute('data-theme', theme);
+    themeBtns.forEach(function (b) {
+      b.classList.toggle('is-active', b.getAttribute('data-theme-set') === theme);
+    });
+  }
+  applyTheme(root.getAttribute('data-theme') || 'dark');
+  themeBtns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      const theme = b.getAttribute('data-theme-set');
+      applyTheme(theme);
+      try { localStorage.setItem('theme', theme); } catch (e) { /* storage blocked */ }
+    });
+  });
+
   /* ---------- 2. MOBILE NAV: auto-close after clicking a link ---------- */
   const navMenu = document.getElementById('navMenu');
   if (navMenu) {
@@ -59,10 +77,10 @@ document.addEventListener('DOMContentLoaded', function () {
   /* ---------- 3. HERO TYPING EFFECT ---------- */
   const typedRoleEl = document.getElementById('typedRole');
   const roles = [
+    'Software Developer',
     'Java Full Stack Developer',
     'Backend Developer',
-    'Web Application Developer',
-    'Software Developer'
+    'Web Application Developer'
   ];
 
   if (typedRoleEl) {
